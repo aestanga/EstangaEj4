@@ -21,7 +21,6 @@ public class EstangaEj4 {
         
         // Creo objetos
         Lavarropas tipo = new Lavarropas();
-        Programas lavar = new Programas();
         
         // Solicito ingresar datos
         System.out.println("INGRESAR LA MARCA DEL LAVARROPAS (DREAN | SAMSGUNG | WHIRLPOOL) :");
@@ -92,8 +91,13 @@ public class EstangaEj4 {
                             System.exit(0);
                         }
                     }
+            //Creo objeto
+            Programas lavar = new Programas(opc1,opc2,confirm);
                     if (confirm2.equalsIgnoreCase(si)) {
-                        lavar.confirycom(opc1,opc2,confirm,confirm1,confirm2);
+                        lavar.complet();
+                        lavar.display();
+                        System.out.println("\n==== LAVANDO ====");
+                        System.exit(0);
                     }
                 } while (confirm3.equalsIgnoreCase(si));
             }
